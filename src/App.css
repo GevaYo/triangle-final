@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+
+.LoginPage {   
+  width: 50%; 
+  /* text-align: right; */
+  padding-left: 8%;
+  padding-right: 8%;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  max-width: 400px;
+} 
