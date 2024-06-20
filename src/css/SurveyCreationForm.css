@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wdth,wght@85.5,100&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+* {
+  font-family: "Noto Sans Hebrew", sans-serif;
+}
+
+.SurveyCreationForm {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.SurveyCreationForm h1 {
+  font-weight: 1000;
+  font-size: 55px;
+  color: #1e6ec5;
+  text-align: center;
+}
+
+.form-groupSCF {
+  margin-bottom: 1rem;
+}
+
+.form-groupSCF label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+label.required::after {
+  content: "*";
+  color: red;
+  margin-left: 3px;
+}
+
+.form-groupSCF input,
+.form-groupSCF textarea {
+  width: calc(100% - 34px); /* Adjusted width to accommodate remove button */
+  padding: 2%;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: rgba(152, 160, 172, 0.19);
+}
+
+label{
+    margin-top: 2%;
+}
+button {
+  
+  
+  margin-right: 2%;
+  margin-bottom: 2%;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(38, 82, 143);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+  
+  
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.question-containerSCF,
+.answer-containerSCF {
+  display: flex;
+  align-items: center;
+  
+  
+}
+
+

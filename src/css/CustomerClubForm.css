@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wdth,wght@85.5,100&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  font-family: "Noto Sans Hebrew", sans-serif;
+  direction: rtl;
+}
+
+.CustomerClubForm {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.CustomerClubForm h1 {
+  font-weight: 1000;
+  font-size: 55px;  /* Increased font size */
+  color: #1e6ec5;
+  text-align: center;
+  animation: pulse 2s;
+  margin: 20px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.form-group {
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Style the asterisk for labels with the "required" class */
+label.required::after {
+  content: "*";
+  color: red; /* Changed color to red */
+  margin-left: 3px; /* Add some spacing between asterisk and label text */
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: rgba(152, 160, 172, 0.19);
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(38, 82, 143);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
