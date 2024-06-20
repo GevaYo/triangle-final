@@ -28,13 +28,15 @@
   
   .option-button {
     padding: 12px 20px;
-    background-color: #ffffff;
-    border: 1px solid #cccccc;
+    background-color: #2903fd;
+    border: 1px solid #0314fc;
     border-radius: 4px;
+    color: #036af1;
     font-size: 16px;
     cursor: pointer;
   }
-  
+
+ 
   .logo-container {
     margin-top: auto;
   }

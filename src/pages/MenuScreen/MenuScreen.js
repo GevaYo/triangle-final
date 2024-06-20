@@ -155,15 +155,15 @@ const MenuScreen = () => {
         <button onClick={() => handleMenuClick('customerDateManagement')}>
           ניהול מועדון לקוחות
         </button>
-        <button onClick={() => handleMenuClick('clubRegistration')}>
+        {/* <button onClick={() => handleMenuClick('clubRegistration')}>
           רישום לקוח חדש לדף המועדון
-        </button>
+        </button> */}
         <button onClick={() => handleMenuClick('inventoryManagement')}>
           ניהול מלאי
         </button>
-        <button onClick={() => handleMenuClick('inventoryManagement')}>
+        {/* <button onClick={() => handleMenuClick('inventoryManagement')}>
           צפייה בדו"חות
-        </button>
+        </button> */}
       </div>
       {/* <footer>
         <video className="video-footer" src={video} autoPlay muted loop />

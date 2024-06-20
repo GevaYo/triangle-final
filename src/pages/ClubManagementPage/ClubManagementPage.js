@@ -22,9 +22,9 @@ const ClubManagementPage = () => {
       </div>
       <h1 className="title">ניהול מועדון הלקוחות</h1>
       <div className="options-container">
-        <button className="option-button">ניהול סקרים</button>
-        <button className="option-button">צפייה בפרטי לקוחות</button>
-        <button className="option-button">ניהול מבצעים</button>
+        <button className="option-button" onClick={handleEventCalendarClick}>ניהול סקרים</button>
+        <button className="option-button" onClick={handleEventCalendarClick}>רישום לקוח חדש לדף המועדון</button>
+        <button className="option-button" onClick={handleEventCalendarClick}>ניהול מבצעים</button>
         <button className="option-button" onClick={handleEventCalendarClick}>ניהול יומן אירועים</button>
       </div>
       <div className="logo-container">
