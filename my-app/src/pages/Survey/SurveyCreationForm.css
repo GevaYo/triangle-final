@@ -1,0 +1,129 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wdth,wght@85.5,100&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+* {
+  font-family: "Noto Sans Hebrew", sans-serif;
+} */
+
+.SurveyCreationForm {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f5f5f5;
+  width: 100vw;
+  padding-bottom: 70px;
+  border-radius: 8px;
+  margin-bottom: 50px;
+}
+
+.survey_container {
+  width: 550px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;  
+  text-align: right;
+  align-items: center;
+  box-sizing: border-box;
+}
+.SurveyCreationForm h1 {
+  font-weight: 1000;
+  font-size: 55px;
+  color: #1e6ec5;
+  text-align: center;
+}
+
+.form-groupSCF {
+  flex: 1 1 calc(33.333% - 1rem);
+  margin-bottom: 1rem;
+  /* margin-bottom: 20px; */
+
+}
+
+.form-groupSCF label {
+  display: flexbox;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+label.required::after {
+  content: "*";
+  color: red;
+  margin-left: 3px;
+}
+
+.form-groupSCF input,
+.form-groupSCF textarea {
+  /* width: calc(100% - 34px);  */
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: rgba(152, 160, 172, 0.19);
+  box-sizing: border-box;
+  /* margin-bottom: 20px; */
+}
+
+label{
+    margin-top: 1%;
+}
+
+.submit-button {
+  margin-top: 25px;
+  width: 100%;
+  /* margin-right: 2%;
+  margin-bottom: 2%;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(38, 82, 143);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+  font-weight: bold;
+  width: 100%; */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.question-containerSCF,
+.answer-containerSCF {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* margin-bottom: 1rem; */
+  /* margin-bottom: 10px; */
+  
+}
+
+
+.question-containerSCF button,
+.answer-containerSCF button {
+  width: 100px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(38, 82, 143);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+.question-containerSCF input,
+.answer-containerSCF input{
+  flex: 1;
+  margin-right: 10px;
+  height: 40px;
+  margin-top: 6px;
+  
+}
+
+/* .required {
+  width: 100px;
+} */

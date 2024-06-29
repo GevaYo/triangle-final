@@ -1,0 +1,156 @@
+.event-calendar-container {
+  /* padding: 20px; */
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f5f5f5;
+  width: 100vw;
+  padding-bottom: 20px;
+  border-radius: 8px;
+  margin-bottom: 50px;
+  overflow: hidden;
+  /* overflow-x: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center; */
+}
+
+.create-events-button {
+  margin-top: auto;
+  align-self: center;
+  font-size: 14px;
+  background-color: rgb(38, 82, 143);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 40px;
+  width: 500px;
+}
+.EventCalendarPage h3
+{
+  text-align: center;
+  align-items: center;
+}
+.create-events-button:hover {
+  background-color: #0056b3;
+}
+
+.add-events-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-events-button:hover {
+  background-color: #218838;
+}
+
+/* .back-button {
+  cursor: pointer;
+  color: blue;
+  margin-bottom: 10px;
+  text-decoration: underline;
+} */
+
+/* .title {
+  font-size: 24px;
+  margin-bottom: 20px;
+} */
+
+.event-list {
+  width: 100%;
+  max-width: 1000px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.calendar-container {
+  flex-grow: 1;
+  border: 1px solid #ddd;
+  display: flex;
+  background-color: #fff;
+  flex-direction: column;
+  min-height: 50px;
+  /* overflow-x: auto; */
+  width: 100%;
+  display: flex;
+  /* justify-content: center; */
+}
+
+.rbc-calendar {
+  flex-grow: 1;
+  min-height: 0;
+}
+
+.rbc-toolbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.rbc-btn-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rbc-toolbar-label {
+  margin: 0 10px;
+}
+
+.generated-events-container {
+  margin-top: 20px;
+  background-color: #fff;
+  border: 10px solid black;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1000px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.generated-events-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.generated-event-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.generated-event-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.generated-event-item input[type="date"],
+.generated-event-item input[type="text"] {
+  margin-left: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex-grow: 1;
+}
+
+.generated-event-item input[type="text"] {
+  flex-grow: 2;
+}
