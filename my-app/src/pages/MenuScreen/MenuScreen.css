@@ -2,7 +2,7 @@
 .menu-screen {
   display: flex;
   flex-direction: column;
-  height: 70vh;
+  height: 75vh;
   background-color: #f5f5f5;
   width: 100vw;
   margin-bottom: 50px;

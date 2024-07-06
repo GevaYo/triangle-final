@@ -38,14 +38,14 @@ header {
   overflow: hidden;
 }
 
-.back-button {
+/* .back-button {
   margin-top: 30px;
   margin-left: 20px;
   cursor: pointer;
   color: blue;
   margin-bottom: 10px;
   text-decoration: underline;
-}
+} */
 
 .video-container video {
   position: absolute;
@@ -96,7 +96,7 @@ footer {
   clear: both;
   display: block;
   background-color: #f5f5f5;
-  padding: 35px;
+  padding: 40px;
   text-align: center;
 }
 
@@ -120,4 +120,40 @@ footer {
 
 .footer-content ul li {
   margin-right: 10px;
+}
+
+
+
+
+
+.back-button {
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  padding: 6px 20px;
+  color: #1e6ec5; /* Blue text color */
+  background-color: #fff; /* White background color */
+  border: 1.5px solid rgb(38, 82, 143) ; 
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  text-decoration:none; /* Ensures no underline */
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block; /* Makes it act like a button */
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: rgb(38, 82, 143) ; /* Blue background on hover */
+  color: #fff; /* White text color on hover */
+}
+
+.back-button:active {
+  background-color: gb(38, 82, 143); /* Darker blue when clicked */
+  border-color: rgb(38, 82, 143) ; /* Darker blue border when clicked */
+}
+
+.back-button:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 5px rgb(38, 82, 143) ; /* Add a blue shadow */
 }

@@ -11,10 +11,10 @@ const ParetoForm = ({ setResults, setQueryParams }) => {
         event.preventDefault();
         setQueryParams({ start_date: startDate, end_date: endDate, criterion, percentage });
         try {
-            const response = await axios.get('http://localhost:3001/pareto/analysis', {
+            const response = await axios.get('http://localhost:5000/pareto/analysis', {
                 params: { start_date: startDate, end_date: endDate, criterion, percentage }
             });
-            console.log("Pareto Analysis Response:", response.data);  // Add this log
+            console.log("Pareto Analysis Response:", response.data); 
             setResults(response.data);
         } catch (error) {
             console.error('Error fetching Pareto analysis:', error);

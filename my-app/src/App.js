@@ -31,10 +31,11 @@ const App = () => {
         <Route path="/prediction" element={<PageLayout><Prediction/></PageLayout>} />
         <Route path="/pareto-analysis" element={<PageLayout><ParetoAnalysisFormPage /></PageLayout>} />
         <Route path="/variation-analysis" element={<PageLayout><VariationAnalysisPage /></PageLayout>} />
-        <Route path="/Survey-LandingPage" element={<PageLayout><SurveyLandingPage /></PageLayout>} />
+        <Route path="/Survey-LandingPage/:id" element={<PageLayout><SurveyLandingPage /></PageLayout>} />
         <Route path="/Survey-CreationForm" element={<PageLayout><SurveyCreationForm /></PageLayout>} />
         <Route path="/SurveyList" element={<PageLayout><SurveyList /></PageLayout>} />
         <Route path="/CustomerClubForm" element={<PageLayout><CustomerClubForm /></PageLayout>} />
+        <Route path="/survey/:surveyId/results" element={<PageLayout><SurveyResults /></PageLayout>} />
       </Routes>
     </Router>
   );

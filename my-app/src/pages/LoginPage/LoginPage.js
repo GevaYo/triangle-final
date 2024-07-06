@@ -9,12 +9,10 @@ const LoginPage = () => {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
-  const navigate = useNavigate(); // Use the useNavigate hook
-
+  const navigate = useNavigate(); 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Perform email and password validation
     if (!validateEmail(email)) {
       setErrorMessage('אנא הכנס כתובת מייל תקינה');
       return;
@@ -25,20 +23,16 @@ const LoginPage = () => {
       return;
     }
 
-    // Perform sign-in logic here, e.g., calling an authentication API
     console.log('הרשם:', email, password);
 
-    // Reset form fields after successful submission
     setEmail('');
     setPassword('');
     setErrorMessage('');
 
-    // Navigate to the MenuScreen page
     navigate('/menu');
   };
 
   const validateEmail = (email) => {
-    // Basic email validation regex
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };

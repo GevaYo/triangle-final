@@ -13,6 +13,8 @@
   padding-bottom: 70px;
   border-radius: 8px;
   margin-bottom: 50px;
+  /* overflow: hidden; */
+  overflow: auto;
 }
 
 .survey_container {
@@ -25,6 +27,7 @@
   text-align: right;
   align-items: center;
   box-sizing: border-box;
+  overflow: auto;
 }
 .SurveyCreationForm h1 {
   font-weight: 1000;
@@ -36,7 +39,6 @@
 .form-groupSCF {
   flex: 1 1 calc(33.333% - 1rem);
   margin-bottom: 1rem;
-  /* margin-bottom: 20px; */
 
 }
 
@@ -54,14 +56,12 @@ label.required::after {
 
 .form-groupSCF input,
 .form-groupSCF textarea {
-  /* width: calc(100% - 34px);  */
   width: 100%;
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 3px;
   background-color: rgba(152, 160, 172, 0.19);
   box-sizing: border-box;
-  /* margin-bottom: 20px; */
 }
 
 label{
@@ -71,17 +71,6 @@ label{
 .submit-button {
   margin-top: 25px;
   width: 100%;
-  /* margin-right: 2%;
-  margin-bottom: 2%;
-  border: none;
-  border-radius: 3px;
-  background-color: rgb(38, 82, 143);
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-size: 14px;
-  font-weight: bold;
-  width: 100%; */
 }
 
 button:hover {
@@ -93,9 +82,6 @@ button:hover {
   display: flex;
   align-items: center;
   width: 100%;
-  /* margin-bottom: 1rem; */
-  /* margin-bottom: 10px; */
-  
 }
 
 
@@ -123,7 +109,3 @@ button:hover {
   margin-top: 6px;
   
 }
-
-/* .required {
-  width: 100px;
-} */

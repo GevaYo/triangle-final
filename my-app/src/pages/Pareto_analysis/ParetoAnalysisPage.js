@@ -15,7 +15,7 @@ const ParetoAnalysisPage = () => {
     return (
         <div className='pareto-analysis-page'>
             <div className="back-button" onClick={handleBackClick}>
-                &lt; Back
+                Back
             </div>
             <div className='pareto_container'>
                 <h1 className="title">Pareto Analysis</h1>

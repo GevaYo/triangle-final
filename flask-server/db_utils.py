@@ -20,6 +20,7 @@ db_config = {
 }
 
 def create_db_connection():
+    """Create and return a database connection."""
     try:
         connection = mysql.connector.connect(
             host=db_config['host'],

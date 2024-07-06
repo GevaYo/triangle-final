@@ -18,7 +18,7 @@ const SurveyLandingPage = () => {
 
   const fetchSurveyData = async (id) => {
     try {
-      const response = await axios.get(`http://localhost:3001/survey/${id}`);
+      const response = await axios.get(`http://localhost:5000/survey/${id}`);
       setSurveyQuestions(response.data.survey_questions);
       initializeResponses(response.data.survey_questions);
     } catch (error) {
@@ -47,7 +47,7 @@ const SurveyLandingPage = () => {
 
   const validateResponses = () => {
     const validationErrors = responses.map(response => response.answer_id === null);
-    setErrors(validationErrors); // Update errors immediately
+    setErrors(validationErrors); 
     return !validationErrors.includes(true);
   };
 
@@ -67,7 +67,7 @@ const SurveyLandingPage = () => {
         a_id: answer_id,
       }));
 
-      await axios.post('http://localhost:3001/responses', {
+      await axios.post('http://localhost:5000/responses', {
         survey_id: id,
         responses: submittedResponses,
       });
@@ -79,7 +79,7 @@ const SurveyLandingPage = () => {
 
   return (
     <div className="SurveyLandingPage">
-      <h1>שאלון:</h1>
+      <h2>שאלון</h2>
       {isSubmitted ? (
         <p>תודה על השתתפותך בסקר!</p>
 

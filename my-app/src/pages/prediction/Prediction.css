@@ -34,12 +34,12 @@
     margin-bottom: 50px;
   }
   
-  .back-button {
+  /* .back-button {
     cursor: pointer;
     color: blue;
     margin-bottom: 10px;
     text-decoration: underline;
-  }
+  } */
   
   .title {
     font-size: 24px;

@@ -6,16 +6,17 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+CORS(app, resources={r"/*": {"origins": "http://localhost:3000", "allow_headers": ["Content-Type"]}})
 
-# MySQL configurations
-app.config['MYSQL_HOST'] = 'localhost'
+
+app.config['MYSQL_HOST'] = '127.0.0.1'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = '123456'
-app.config['MYSQL_DB'] = 'avivdb'
+app.config['MYSQL_PASSWORD'] = ''
+app.config['MYSQL_DB'] = 'michalgoa'
 app.config['MYSQL_CHARSET'] = 'utf8mb4'
 
 mysql = MySQL(app)
+
 
 @app.route('/survey/<int:survey_id>/results', methods=['GET'])
 def get_survey_results(survey_id):
@@ -70,7 +71,7 @@ def get_surveys():
             {
                 'survey_id': survey[0],
                 'title': survey[1],
-                'start_date': survey[2].isoformat()  # Convert datetime to ISO format
+                'start_date': survey[2]
             }
             for survey in surveys
         ]
@@ -82,7 +83,6 @@ def get_surveys():
         cursor.close()
 
 
-# Endpoint to send emails
 @app.route('/send-emails', methods=['POST'])
 def send_emails():
     data = request.json
@@ -96,19 +96,18 @@ def send_emails():
 
     smtp_server = "smtp.gmail.com"
     smtp_port = 587
-    smtp_user = "aviviz123@gmail.com"
-    smtp_password = "vkza dbfn xfgu fmvm"
+    smtp_user = "triangle321123@gmail.com"
+    smtp_password = ""
 
     subject = "סקר חדש!"
-    body = f" קיים סקר חדש במערכתנו, לחצו על הקישור הבא כדי לצפות בסקר החדש: http://localhost:3000/survey/{survey_id}"
+    body = f" קיים סקר חדש במערכתנו, לחצו על הקישור הבא כדי לצפות בסקר החדש: http://localhost:3000/Survey-LandingPage/{survey_id}"
 
     msg = MIMEMultipart()
     msg['From'] = smtp_user
-    msg['To'] = smtp_user  # Set a single recipient in the To field
+    msg['To'] = smtp_user  
     msg['Subject'] = subject
     msg.attach(MIMEText(body, 'plain'))
-    msg['Bcc'] = ", ".join(emails)  # Add all recipient emails in the BCC field
-
+    msg['Bcc'] = ", ".join(emails)  
     try:
         server = smtplib.SMTP(smtp_server, smtp_port)
         server.ehlo()
@@ -125,7 +124,7 @@ def send_emails():
         print(f"An error occurred: {e}")
         return jsonify({"error": f"An error occurred: {e}"}), 500
 
-# Fetch survey questions endpoint
+
 @app.route('/survey/<int:survey_id>', methods=['GET'])
 def get_survey_questions(survey_id):
     cursor = mysql.connection.cursor()
@@ -135,12 +134,11 @@ def get_survey_questions(survey_id):
         
         survey_questions = []
         for row in rows:
-            q_id = row[0]  # Accessing q_id from the tuple row
-            questionText = row[1]  # Accessing questionText from the tuple row
-            a_id = row[2]  # Accessing a_id from the tuple row
-            answerText = row[3]  # Accessing answerText from the tuple row
+            q_id = row[0]  
+            questionText = row[1] 
+            a_id = row[2] 
+            answerText = row[3] 
             
-            # Check if the question already exists in survey_questions
             question = next((q for q in survey_questions if q['q_id'] == q_id), None)
             if not question:
                 question = {
@@ -150,7 +148,6 @@ def get_survey_questions(survey_id):
                 }
                 survey_questions.append(question)
             
-            # Add answers to the question
             if a_id:
                 question['answers'].append({
                     'a_id': a_id,
@@ -270,4 +267,26 @@ def submit_customer_club():
         return jsonify({'error': 'Method not allowed'}), 405
 
 if __name__ == '__main__':
-    app.run(debug=True, port=3001)
+    # app.run(debug=True, port=3000)
+    app.run(debug=True)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
